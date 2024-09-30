@@ -2,7 +2,7 @@
 # Mutual Fund Advisory Chatbot Application
 
 **Developers**: Amitesh Patra, Jainil Patel  
-**Deployment**: [Streamlit](https://aibf-mutual-fund-rag-llm.streamlit.app/?embed_options=dark_theme) 
+**Deployment**: [Streamlit](https://aibf-mutual-fund-rag-llm.streamlit.app/?embed_options=dark_theme)  <br>
 **GitHub Repository**: [Link to Repository](https://github.com/amitesh30/AIBF-MUTUAL-FUND-RAG-LLM/)
 
 ## Objective
