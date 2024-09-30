@@ -11,3 +11,4 @@ pymongo
 joblib
 nest_asyncio
 sentence-transformers
+groq
