@@ -9,3 +9,4 @@ langchain-community
 plotly
 pymongo
 joblib
+nest_asyncio
