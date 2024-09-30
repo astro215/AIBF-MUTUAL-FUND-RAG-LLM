@@ -16,13 +16,27 @@ An interactive chatbot providing mutual fund advice with real-time data, persona
   <img src="https://img.shields.io/badge/Plotly-3F4F75?logo=plotly&logoColor=white" alt="Plotly" />
   <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python" />
 </p>
-## Features
-- Real-time mutual fund data retrieval using `Mftool`.
-- Contextual chatbot responses with `Langchain` and `ChatGroq`.
-- Vector storage and retrieval with `Pinecone`.
-- Data visualization of NAV history with `Plotly`.
-- Chat history stored in `MongoDB`.
 
+---
+
+## Key Features
+
+1. **Real-Time Mutual Fund Data Retrieval**:  
+   Using `Mftool`, the app fetches updated and accurate information on mutual funds, including NAVs, scheme details, and fund performance.
+
+2. **Personalized Guidance with Conversational AI**:  
+   Powered by a Retrieval-Augmented Generation (RAG) model using `Langchain` for data retrieval and `ChatGroq` for generating context-aware responses.
+
+3. **Vector Storage and Retrieval**:  
+   `Pinecone` stores data embeddings, allowing for efficient similarity searches and quick retrieval of relevant information.
+
+4. **Contextual Conversations**:  
+   User chat history is stored using `MongoDB` to maintain context for personalized responses, with TTL indexing for automatic data expiry.
+
+5. **Data Visualization**:  
+   Users can view historical NAV data through interactive visualizations using `Plotly`.
+
+---
 ## Architecture
 
 ```mermaid
