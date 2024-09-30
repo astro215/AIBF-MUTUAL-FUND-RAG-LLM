@@ -3,6 +3,12 @@ from mftool import Mftool
 import pandas as pd
 import time
 import plotly.express as px
+import streamlit as st
+
+
+PINECONE_API_KEY =  st.secrets['PINECONE_API']
+connection_string1 = st.secrets["MONGODB_CONNECTION_STRING"]
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 
 # Initialize the Mftool object
 mf = Mftool()
@@ -329,22 +335,19 @@ with tabs[2]:
     from langchain.text_splitter import RecursiveCharacterTextSplitter
     from langchain.prompts import PromptTemplate
     from langchain.llms import CTransformers
-    load_dotenv()
-    PINECONE_API_KEY = os.environ.get('PINECONE_API')
-    connection_string1 = os.environ.get("MONGODB_CONNECTION_STRING")
-    GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
+    
 
 
     chat_message_history = MongoDBChatMessageHistory(
             session_id="test_session",
-            connection_string="mongodb+srv://amiteshpatrabtech2021:WHcFjhQUYwVb4KSX@aibf.snwxj.mongodb.net/",
+            connection_string=connection_string1,
             database_name="amiteshpatrabtech2021",
             collection_name="chat_histories",
         )
 
     # MongoDB connection setup
     def get_mongo_client():
-        connection_string = "mongodb+srv://amiteshpatrabtech2021:WHcFjhQUYwVb4KSX@aibf.snwxj.mongodb.net/"
+        connection_string = connection_string1
 
         client = MongoClient(connection_string)
         return client
@@ -364,7 +367,7 @@ with tabs[2]:
 
         chat_message_history = MongoDBChatMessageHistory(
             session_id="test_session",
-            connection_string="mongodb+srv://amiteshpatrabtech2021:WHcFjhQUYwVb4KSX@aibf.snwxj.mongodb.net/",
+            connection_string= connection_string1,
             database_name="amiteshpatrabtech2021",
             collection_name="chat_histories",
         )
