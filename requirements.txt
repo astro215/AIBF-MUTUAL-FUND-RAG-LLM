@@ -6,5 +6,6 @@ pinecone-notebooks
 langchain-groq
 langchain-mongodb
 langchain-community
-
+plotly
+pymongo
 
